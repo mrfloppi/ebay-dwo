@@ -1,0 +1,8 @@
+  div#header, div#footer {
+    width: 100%;
+    height: 100px;
+    background: black;
+  }
+  div#article {
+    border: solid black 4px;
+  }
