@@ -117,3 +117,8 @@ transform: skew(25deg);
 div.design p, div.design ul {
 margin: 1em 0;
 }
+div.footer p {
+max-width: 560px;
+margin-left: auto;
+margin-right: auto;
+}
