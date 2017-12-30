@@ -1,29 +1,29 @@
+body {
+margin: 0;
+}
 div.design {
 background: black;
+/* background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 85%);
+background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 25%,rgba(0,0,0,0) 85%);
+background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 25%,rgba(0,0,0,0) 85%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
+*/
 }
 div.design * {
 font-family: 'Lato', sans-serif;
 box-sizing: border-box;
 }
 div.design h1 {
-background: black;
-color: #dcdcdc;
-font-size: 28px;
-padding: 12px 34px 12px 38px;
+color: #000000;
+font-size: 32px;
+padding: 0;
 line-height: normal;
-width: 98%;
-margin: 1em 0 .5em -38px;
-background: #45484d;
-background: -moz-linear-gradient(top, #45484d 0%, #000000 100%);
-background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%);
-background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
-transform: skew(-25deg);
-font-weight: normal;
-}
-div.design h1 span {
-transform: skew(25deg);
-display: block;
+margin: .5em 0 1em;
+text-transform: uppercase;
+word-wrap: break-word;
+/* color: #b31c22;
+*/
+text-decoration: underline;
 }
 div.design h2 {
 background: black;
@@ -54,8 +54,6 @@ margin-bottom: 0.25em;
 }
 div.header, div.footer {
 width: 100%;
-min-height: 100px;
-background: black;
 line-height: normal;
 padding: 0;
 margin: 0;
@@ -81,8 +79,15 @@ height: auto;
 div.footer {
 padding: 24px 34px;
 color: #878787;
-text-align: center;
 color: #dcdcdc;
+background: url(https://raw.githubusercontent.com/mrfloppi/ebay-dwo/master/contact-dwo.jpg) no-repeat;
+background-size: 284px;
+background-position: right 34px top 24px;
+background-size: contain;
+background-position: bottom right;
+background-size: 380px 223px;
+padding-bottom: 250px;
+transition: all .2s ease-in-out;
 }
 a.button {
 display: inline-block;
@@ -98,28 +103,107 @@ background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
 border: solid #fff 1px;
 font-size: 24px;
-transform: skew(-25deg);
 transition: all .2s ease-in-out;
+width: 100%;
+text-align: center;
+box-shadow: 0 0 10px 15px black;
 }
 a.button span {
 transition: all .2s ease-in-out;
 }
 a.button:hover {
-opacity: .85;
-transform: scale(1.1);
+transform: translateY(-4px);
 }
 a.button:hover span {
-transform: scale(1);
 }
 a.button span {
 display: block;
-transform: skew(25deg);
 }
 div.design p, div.design ul {
 margin: 1em 0;
 }
+.image-holder img {
+display: block;
+width: 100%;
+height: auto;
+border: solid black 1px;
+padding: 6px;
+}
+.image-gallery .image-holder:nth-child(4n) {
+margin-right: 0;
+}
+div.image-gallery {
+display: flex;
+flex-wrap: wrap;
+}
+.image-holder {
+/* width: 100%;
+margin: 0 0 2%;
+*/
+width: 48%;
+margin: 0 2% 2% 0;
+}
+.navbar {
+/* background: red;
+*/
+display: table;
+width: 100%;
+margin: -34px 0px 42px -24px;
+table-layout: fixed;
+border-collapse: collapse;
+border-radius: 0 0 46px 0;
+overflow: hidden;
+}
+a.menu-item {
+border: solid white 1px;
+display: table-cell;
+text-align: center;
+background: #44474b;
+color: #fff;
+padding: 12px;
+text-decoration: none;
+font-size: 14px;
+transition: all .2s ease-in-out;
+}
+a.menu-item:hover {
+background: black;
+}
+@media (min-width: 420px) {
+.image-holder {
+width: 48%;
+margin: 0 2% 2% 0;
+}
+}
+@media (min-width: 680px) {
+.image-holder {
+width: 23%;
+}
 div.footer p {
-max-width: 560px;
+/* max-width: 560px;
 margin-left: auto;
 margin-right: auto;
+*/
+max-width: 50%;
+}
+div.footer a.button {
+max-width: 50%;
+}
+div.footer {
+padding-bottom: 0;
+background-size: 48%;
+background-position: right bottom;
+}
+/* a.button {
+transform: skew(-25deg);
+}
+a.button span {
+transform: skew(25deg);
+}
+*/
+}
+@media (min-width: 1060px) {
+div.footer {
+margin-top: 24px;
+background-size: contain;
+}
 }
